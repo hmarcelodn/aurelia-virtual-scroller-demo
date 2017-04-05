@@ -1,15 +1,13 @@
-<template> 
-    
-    <h1>Aurelia Virtual Scroller Plugin (aurelia-v-scroll)</h1>            
-
-    <div class="row">
-        <div class="col-sm-4">
+<template>
+          
+    <div class="row infoCounter">
+        <div class="col-sm-12 text-center">
             DOM Elements: ${domElements}
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-sm-4">
+    <div class="row infoCounter">
+        <div class="col-sm-12 text-center">
             Observable Elements: ${list.length}
         </div>
     </div>    
@@ -20,7 +18,7 @@
                           fetcher.bind: fetcher;
                           storage.bind: list;
                           debug.bind: true;
-                          window-scroller.bind: true;
+                          window-scroller.bind: false;
                           viewport-element.bind: 'lazy-scroll-container';
                           callback.bind: buildRowCallback;
                           breakpoints.bind: 
@@ -31,5 +29,4 @@
                             ];">         
         </div>
     </div>    
-
 </template>

@@ -3,7 +3,6 @@ import '../styles/styles.css';
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap';
-import 'aurelia-virtual-scroll';
 
 // comment out if you don't want a Promise polyfill (remove also from webpack.config.babel.js)
 import * as Bluebird from 'bluebird';

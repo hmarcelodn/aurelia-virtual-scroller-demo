@@ -1,5 +1,12 @@
 body {
-  margin: 0;
+  margin: 0;  
+  background-color: black !important;
+  color: white !important;
+}
+
+.row{
+  margin-left: 0px !important;
+  padding: 10px;
 }
 
 .splash {
@@ -23,15 +30,13 @@ body {
   margin-top: 50px;
 }
 
+
 .page-host {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50px;
-  bottom: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
+  margin-top: 50px;
+  background-color: black;
+  color: white;
 }
+
 
 @media print {
   .page-host {
@@ -172,4 +177,13 @@ div.au-stagger {
   100% {
     opacity: 1;
   }
+}
+
+.infoCounter{
+  font-size: 20px !important;
+  color: green;
+}
+
+input{
+  color: black !important;
 }

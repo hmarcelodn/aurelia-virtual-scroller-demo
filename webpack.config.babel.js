@@ -64,11 +64,12 @@ const coreBundles = {
     'aurelia-templating',
     'aurelia-templating-binding',
     'aurelia-templating-router',
-    'aurelia-templating-resources'    
+    'aurelia-templating-resources',
+    'aurelia-virtual-scroll'  
   ],
-  plugins:[
+  /*plugins:[
     'aurelia-virtual-scroll'
-  ]
+  ]*/
 }
 
 /**
@@ -79,8 +80,8 @@ let config = generateConfig(
     entry: {
       'app': ['./src/main' /* this is filled by the aurelia-webpack-plugin */],
       'aurelia-bootstrap': coreBundles.bootstrap,
-      'aurelia': coreBundles.aurelia.filter(pkg => coreBundles.bootstrap.indexOf(pkg) === -1),
-      'aurelia-demo-plugin': coreBundles.plugins
+      'aurelia': coreBundles.aurelia.filter(pkg => coreBundles.bootstrap.indexOf(pkg) === -1)//,
+      //'aurelia-demo-plugin': coreBundles.plugins
     },
     output: {
       path: outDir
