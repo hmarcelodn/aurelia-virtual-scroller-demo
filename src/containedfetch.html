@@ -1,9 +1,9 @@
-<template> 
-    
+<template>
+
     <!--
     <require from="./aurelia-virtual-scroll"></require>
     -->
-    
+
     <div class="row infoCounter">
         <div class="col-sm-12 text-center">
             DOM Elements: ${domElements}
@@ -14,7 +14,15 @@
         <div class="col-sm-12 text-center">
             Observable Elements: ${list.length}
         </div>
-    </div>      
+    </div>    
+
+    <div class="row">
+        <div class="col-sm-12">
+            <center>
+                <button type="button" class="btn btn-info" click.trigger="printIndexZero()">Print Index 0</button>
+            </center>
+        </div>
+    </div>
 
     <div class="lazy-scroll-container" style="border: 1px solid blue;">
         <div v-scroll="slot-height.bind: 400;
@@ -22,7 +30,7 @@
                           fetcher.bind: fetcher;
                           storage.bind: list;
                           debug.bind: true;
-                          window-scroller.bind: true;
+                          window-scroller.bind: false;
                           viewport-element.bind: 'lazy-scroll-container';
                           callback.bind: buildRowCallback;
                           breakpoints.bind: 
@@ -31,9 +39,8 @@
                                 { breakpointFrom: 100, breakpointTo: 399, height: 200 },
                                 { breakpointFrom: 900, breakpointTo: 3000, height: 70 }
                             ];
-                         enable-fetch-mode.bind: false;
-                         fetch-buffer.bind: 20">  
+                         enable-fetch-mode.bind: true;
+                         fetch-buffer.bind: 20">         
         </div>
     </div>    
-
 </template>

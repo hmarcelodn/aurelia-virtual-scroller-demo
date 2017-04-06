@@ -1,4 +1,4 @@
-export class Contained{
+export class Containedfetch{
     constructor(){
         this.list = [];
         this.vlist = [];
@@ -14,12 +14,15 @@ export class Contained{
 
         setInterval(function(){ 
             updateDom();
-        }, 300);        
+        }, 300);
+
     }
+    
+    fetcher(context){
 
-    fetcher(){
+        console.log(context);
+
         return new Promise((resolve, reject) => {
-
             let fetchList = [];
 
             for(let i = 0; i < 1000; i++) {
@@ -32,10 +35,13 @@ export class Contained{
 
     buildRowCallback(item){
         return "<div class='row'>" +
-                 "<div class='col-sm-4'><img class='img-responsive' src='http://www.kapoww-t-shirts.com/designs/retro/R044/R044-large.png' class='img-rounded' alt='Red Phantom' width='40' height='40'></div>" +
+                 "<div class='col-sm-4'><img class='img-responsive' src='https://img.clipartfest.com/4b37ffc32328b3f43f0cca83bb6b3731_pac-man-ghost-png-transparent-blue-ghost-pac-man-clipart_1024-1024.png' class='img-rounded' alt='Red Phantom' width='40' height='40'></div>" +
                  "<div class='col-sm-4 text-center'>${propertyOne}</div>" +
                  "<div class='col-sm-4'><input class='form-control' type='text' value.bind='propertyOne' /></div>" +
-               "</div>";   
+               "</div>";     
     }
-        
+
+    printIndexZero(){
+        alert(this.list[0].propertyOne);
+    }
 }

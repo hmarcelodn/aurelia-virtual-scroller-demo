@@ -1,5 +1,9 @@
 <template>
-          
+
+    <!--
+    <require from="./aurelia-virtual-scroll"></require>
+    -->
+
     <div class="row infoCounter">
         <div class="col-sm-12 text-center">
             DOM Elements: ${domElements}
@@ -23,10 +27,12 @@
                           callback.bind: buildRowCallback;
                           breakpoints.bind: 
                             [
-                                { breakpointFrom: 400, breakpointTo: 900, height: 100 },
+                                { breakpointFrom: 400, breakpointTo: 900, height: 150 },
                                 { breakpointFrom: 100, breakpointTo: 399, height: 200 },
                                 { breakpointFrom: 900, breakpointTo: 3000, height: 70 }
-                            ];">         
+                            ];
+                         enable-fetch-mode.bind: false;
+                         fetch-buffer.bind: 20">         
         </div>
     </div>    
 </template>
