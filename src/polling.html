@@ -1,9 +1,5 @@
-<template> 
-    
-    <!--    
-    <require from="./aurelia-virtual-scroll"></require>
-    -->
-    
+<template>         
+        
     <div class="row infoCounter">
         <div class="col-sm-12 text-center">
             DOM Elements: ${domElements}
@@ -16,7 +12,20 @@
         </div>
     </div>      
 
-    <div class="lazy-scroll-container" style="border: 1px solid blue;">
+    <div class="row">
+        <div class="col-sm-6">
+            <center>
+                <button type="button" class="btn btn-info" click.trigger="addItems(5000)">ADD 5000</button>
+            </center>
+        </div>
+        <div class="col-sm-6">
+            <center>
+                <button type="button" class="btn btn-info" click.trigger="addItems(1)">ADD 1</button>
+            </center>
+        </div>        
+    </div>
+
+    <div class="lazy-scroll-container">
         <div v-scroll="slot-height.bind: 400;
                           slot-line-height.bind: 70;
                           fetcher.bind: fetcher;
@@ -32,8 +41,9 @@
                                 { breakpointFrom: 900, breakpointTo: 3000, height: 70 }
                             ];
                          enable-fetch-mode.bind: false;
-                         fetch-buffer.bind: 20">  
+                         fetch-buffer.bind: 20;
+                         array-polling-mode: true">  
         </div>
-    </div>     
+    </div>    
 
 </template>
