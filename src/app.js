@@ -7,7 +7,8 @@ export class App {
       { route: ['windowfetch'], name: 'windowfetch', moduleId: './windowfetch', nav: true, title: 'Window Fetch' },
       { route: ['containedfetch'], name: 'containedfetch', moduleId: './containedfetch', nav: true, title: 'Contained Fetch' },
       { route: ['changed'], name: 'changed', moduleId: './changed', nav: true, title: 'Changed' },
-      { route: ['polling'], name: 'polling', moduleId: './polling', nav: true, title: 'Polling' }  
+      { route: ['polling'], name: 'polling', moduleId: './polling', nav: true, title: 'Polling' } ,
+      { route: ['header'], name: 'header', moduleId: './header', nav: true, title: 'Headers' }
     ]);
 
     this.router = router;
