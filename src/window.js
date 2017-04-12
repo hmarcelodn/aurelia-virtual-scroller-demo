@@ -30,7 +30,8 @@ export class Window{
         });        
     }
 
-    buildRowCallback(item){
+    buildRowCallback(item, itemIndex, firstIndex, lastIndex){
+
         return "<div class='row'>" +
                  "<div class='col-sm-4'><img class='img-responsive' src='http://vignette3.wikia.nocookie.net/wreckitralph/images/5/58/Blinky8bit.png/revision/latest?cb=20130625170114' class='img-rounded' alt='Red Phantom' width='40' height='40'></div>" +
                  "<div class='col-sm-4 text-center'><a href='#' click.trigger='navigate()'>${propertyOne}</a></div>" +
